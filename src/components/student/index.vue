@@ -9,8 +9,6 @@
     >
     </el-date-picker>
     <el-button @click="handleAle">测试</el-button>
-    <button>1</button>
-    <button>22</button>
   </div>
 </template>
 

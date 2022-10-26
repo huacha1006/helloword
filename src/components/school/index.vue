@@ -1,6 +1,7 @@
 <template>
   <div style="margin-top: 20px">
     <span> hello </span>
+    <span>haha</span>
   </div>
 </template>
 
