@@ -1,7 +1,6 @@
 <template>
   <div style="margin-top: 20px">
     <span> hello </span>
-    <span>haha</span>
   </div>
 </template>
 
@@ -14,7 +13,11 @@ export default {
     };
   },
 
-  methods: {},
+  methods: {
+    show(){
+      alert("🐵🐵收到！")
+    }
+  },
 };
 </script>
 

@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    <Student :student="student" />
-    <School :msg="msg" />
+    <Student ref="student"  :student="student" />
+    <School ref="school" :msg="msg" />
+    <el-button @click="handeleTo">点击为组件干点事情</el-button>
   </div>
 </template>
 
@@ -19,9 +20,9 @@ export default {
     };
   },
   methods: {
-    checkCode(val) {
-      console.log(val);
-    },
+    handeleTo(){
+      this.$refs.school.show()
+    }
   },
 };
 </script>
