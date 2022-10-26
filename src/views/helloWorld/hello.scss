@@ -1,0 +1,13 @@
+$px: 1vh;
+$hpx: 1vh;
+$wpx: 1vw;
+// 像素比例尺
+$bl: 0.09;
+// 元素真实尺寸单位
+$rpx: $px * $bl;
+$ruler: 2.29; // 宽距离高的倍率
+// 屏幕宽度 1.78 * 100vh
+$screenWidth: 229 * $px;
+// $screenWidth:1920 * $rpx;
+// 屏幕高度 100vh
+$screenHeight: 100 * $px;
