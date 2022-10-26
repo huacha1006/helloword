@@ -24,21 +24,10 @@ export default {
   },
   methods: {
     handleAle() {
-      this.throttle(this.submit)();
+      console.log('更改')
     },
     submit() {
       console.log("提交");
-    },
-    throttle(fun) {
-      let timer = null;
-      return function () {
-        fun();
-        if (!timer) {
-          timer = setTimeout(function () {
-            timer = null;
-          }, 1000);
-        }
-      };
     },
   },
 };
