@@ -1,14 +1,29 @@
 <template>
   <div class="contain">
-    <el-date-picker
-      v-model="value"
-      type="daterange"
-      range-separator="至"
-      start-placeholder="开始日期"
-      end-placeholder="结束日期"
-    >
-    </el-date-picker>
-    <el-button @click="handleAle">测试</el-button>
+    <el-form>
+      <el-form-item label="开始时间">
+        <el-date-picker
+          v-model="form.start"
+          type="date"
+          value-format="yyyy-MM-dd"
+          @change="change1"
+          :picker-options="option1"
+          placeholder="选择日期"
+        >
+        </el-date-picker>
+      </el-form-item>
+      <el-form-item label="结束时间">
+        <el-date-picker
+          v-model="form.end"
+          type="date"
+          value-format="yyyy-MM-dd"
+          @change="change2"
+          :picker-options="option2"
+          placeholder="选择日期"
+        >
+        </el-date-picker>
+      </el-form-item>
+    </el-form>
   </div>
 </template>
 
@@ -17,15 +32,37 @@ export default {
   props: ["student"],
   data() {
     return {
-      value: 0,
+      form: {
+        start: "",
+        end: "",
+        choiceDate: "",
+      },
     };
   },
-  methods: {
-    handleAle() {
-      console.log('更改')
+  computed: {
+    option1() {
+      return {
+        disabledDate: (time) => {
+          return time.getTime() > new Date(this.form.end) || time.getTime() < Date.now();
+        },
+      };
     },
-    submit() {
-      console.log("提交");
+    option2(){
+      return {
+        disabledDate:time=>{
+          return time.getTime() < new Date(this.form.start)
+        }
+
+      }
+    }
+  },
+  methods: {
+
+    change1(val) {
+      console.log("1", val);
+    },
+    change2(val) {
+      console.log("2", val);
     },
   },
 };

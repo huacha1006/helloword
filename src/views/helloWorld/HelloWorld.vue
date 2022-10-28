@@ -2,7 +2,6 @@
   <div class="hello">
     <Student ref="student"  :student="student" />
     <School ref="school" :msg="msg" />
-    <el-button @click="handeleTo">点击为组件干点事情</el-button>
   </div>
 </template>
 
@@ -20,9 +19,6 @@ export default {
     };
   },
   methods: {
-    handeleTo(){
-      this.$refs.school.show()
-    }
   },
 };
 </script>

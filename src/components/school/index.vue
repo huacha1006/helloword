@@ -1,6 +1,5 @@
 <template>
   <div style="margin-top: 20px">
-    <span> hello </span>
   </div>
 </template>
 
