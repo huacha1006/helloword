@@ -1,5 +1,6 @@
 <template>
-  <div style="margin-top: 20px">
+  <div>
+    dev进行了开发项目
   </div>
 </template>
 
@@ -13,9 +14,9 @@ export default {
   },
 
   methods: {
-    show(){
-      alert("🐵🐵收到！")
-    }
+    show() {
+      alert("🐵🐵收到！");
+    },
   },
 };
 </script>
